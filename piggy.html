@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piggy Game</title>
+  </head>
+  <link rel="stylesheet" href="piggy.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Noto Sans"
+    rel="stylesheet"
+  />
+  <body>
+    <main>
+      <section class="player1 player-active">
+        <h2>PLAYER 1</h2>
+        <h1 class="score">0</h1>
+        <div>
+          <p class="current">CURRENT</p>
+          <p class="current-score">0</p>
+        </div>
+      </section>
+      <section class="player2">
+        <h2>PLAYER 2</h2>
+        <h1 class="score">0</h1>
+        <div>
+          <p class="current">CURRENT</p>
+          <p class="current-score">0</p>
+        </div>
+      </section>
+      <img src="dice-5.png" class="image" />
+      <button class="btn new">🔄 New game</button>
+      <button class="btn dice">🎲 Roll dice</button>
+      <button class="btn hold">📥 Hold</button>
+    </main>
+    <button class="btnm">Rules</button>
+    <div class="main modal">
+      <img src="1828778.png" class="close" />
+      <h2>RULES</h2>
+      <p>
+        1.If the player get 1 in 🎲 DICE then all the CURRENT SCORE become
+        reduced.
+      </p>
+      <p>2.Player can press the 📥HOLD button to add all his CURRENT SCORE.</p>
+      <p>
+        3.After pressing the 📥HOLD button chance will goes to opposite player.
+      </p>
+      <p>4.PLAYER who gets SCORE HUNDRED will WIN the Game</p>
+    </div>
+    <div class="overlay modal"></div>
+
+    <div class="main modal1">
+      <img src="1828778.png" class="close" />
+      <h1 class="player">PLAYER 1</h1>
+      <img src="cup.png" alt="" class="cup" />
+
+      <h1>WINS</h1>
+      <div class="confetti main modal1">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+      </div>
+    </div>
+    <script src="piggy.js"></script>
+  </body>
+</html>

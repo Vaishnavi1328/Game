@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top left, #d74d7b, #bc3b66);
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Sans";
+  font-size: 22px;
+  color: rgb(70, 58, 58);
+}
+main {
+  width: 80%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(196, 103, 134);
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+section {
+  position: relative;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  position: absolute;
+  top: 3rem;
+}
+div {
+  display: flex;
+  position: absolute;
+  bottom: 5rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  border-radius: 5px;
+  padding: 30px;
+  background-color: rgb(239, 107, 151);
+}
+.btn {
+  position: absolute;
+  width: 11rem;
+  height: 2.5rem;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  padding: 5px;
+  cursor: pointer;
+}
+.current {
+  font-size: 30px;
+  color: whitesmoke;
+}
+.score {
+  position: absolute;
+  top: 7rem;
+  color: rgb(117, 53, 72);
+  font-size: 70px;
+}
+img {
+  position: absolute;
+  top: 50%;
+  width: 60px;
+}
+.new {
+  top: 1.5rem;
+}
+.dice {
+  bottom: 8rem;
+}
+.hold {
+  bottom: 4rem;
+}
+.current-score {
+  font-size: 50px;
+  color: whitesmoke;
+}
+.player-active {
+  background-color: rgb(253, 185, 208);
+}
+.player-active .current {
+  font-size: 40px;
+}
+.player-active .score {
+  font-size: 90px;
+}
+.player-active h2 {
+  font-size: 40px;
+}
+.player-active .current-score {
+  font-size: 55px;
+}
+.new:hover {
+  top: 1.7rem;
+  transition: 0.4s;
+}
+.dice:hover {
+  bottom: 7.8rem;
+  transition: 0.4s;
+}
+.hold:hover {
+  bottom: 3.8rem;
+  transition: 0.4s;
+}
+.btnm {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 7rem;
+  height: 2.5rem;
+  border-radius: 30px;
+  border: none;
+  text-transform: uppercase;
+  padding: 5px;
+  cursor: pointer;
+}
+.modal {
+  position: absolute;
+  height: 50vh;
+  width: 70%;
+  background-color: whitesmoke;
+  color: rgb(67, 61, 61);
+  line-height: 40px;
+  top: 3rem;
+  z-index: 10;
+  animation-name: animatetop;
+  display: none;
+  animation-duration: 0.4s;
+}
+@keyframes animatetop {
+  from {
+    top: -200px;
+    opacity: 0;
+  }
+  to {
+    top: 3rem;
+    opacity: 1;
+  }
+}
+.close {
+  position: absolute;
+  right: 7px;
+  top: 8px;
+  cursor: pointer;
+  width: 20px;
+}
+.main .close img:hover {
+  width: 17px;
+}
+.modal h2 {
+  top: 0;
+}
+.modal p {
+  position: relative;
+  left: 0;
+  text-align: left;
+  margin-left: 0px;
+  line-height: 40px;
+  word-spacing: 5px;
+}
+.overlay {
+  height: 100vh;
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  display: none;
+  animation-name: animateto;
+  animation-duration: 0.4s;
+}
+@keyframes animateto {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+.modal1 {
+  position: absolute;
+  height: 50vh;
+  width: 50%;
+  background-color: whitesmoke;
+  color: rgb(67, 61, 61);
+  line-height: 40px;
+  top: 3rem;
+  z-index: 10;
+  animation-name: animatetop;
+  display: none;
+  animation-duration: 0.4s;
+}
+.cup {
+  align-items: center;
+  justify-content: center;
+}
+.main .player {
+  position: absolute;
+  top: 1rem;
+  left: 39%;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  z-index: 100;
+}
+.main .cup {
+  position: absolute;
+  top: 6rem;
+  z-index: 100;
+}
+.main h1 {
+  position: absolute;
+  top: 11rem;
+  z-index: 100;
+}
+
+.confetti {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.confetti-piece {
+  position: absolute;
+  width: 10px;
+  height: 30px;
+  background: #ffd300;
+  top: 0;
+  opacity: 0;
+}
+.confetti-piece:nth-child(1) {
+  left: 7%;
+  -webkit-transform: rotate(-40deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 182ms;
+  -webkit-animation-duration: 1116ms;
+}
+.confetti-piece:nth-child(2) {
+  left: 14%;
+  -webkit-transform: rotate(4deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 161ms;
+  -webkit-animation-duration: 1076ms;
+}
+.confetti-piece:nth-child(3) {
+  left: 21%;
+  -webkit-transform: rotate(-51deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 481ms;
+  -webkit-animation-duration: 1103ms;
+}
+.confetti-piece:nth-child(4) {
+  left: 28%;
+  -webkit-transform: rotate(61deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 334ms;
+  -webkit-animation-duration: 708ms;
+}
+.confetti-piece:nth-child(5) {
+  left: 35%;
+  -webkit-transform: rotate(-52deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 302ms;
+  -webkit-animation-duration: 776ms;
+}
+.confetti-piece:nth-child(6) {
+  left: 42%;
+  -webkit-transform: rotate(38deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 180ms;
+  -webkit-animation-duration: 1168ms;
+}
+.confetti-piece:nth-child(7) {
+  left: 49%;
+  -webkit-transform: rotate(11deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 395ms;
+  -webkit-animation-duration: 1200ms;
+}
+.confetti-piece:nth-child(8) {
+  left: 56%;
+  -webkit-transform: rotate(49deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 14ms;
+  -webkit-animation-duration: 887ms;
+}
+.confetti-piece:nth-child(9) {
+  left: 63%;
+  -webkit-transform: rotate(-72deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 149ms;
+  -webkit-animation-duration: 805ms;
+}
+.confetti-piece:nth-child(10) {
+  left: 70%;
+  -webkit-transform: rotate(10deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 351ms;
+  -webkit-animation-duration: 1059ms;
+}
+.confetti-piece:nth-child(11) {
+  left: 77%;
+  -webkit-transform: rotate(4deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 307ms;
+  -webkit-animation-duration: 1132ms;
+}
+.confetti-piece:nth-child(12) {
+  left: 84%;
+  -webkit-transform: rotate(42deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 464ms;
+  -webkit-animation-duration: 776ms;
+}
+.confetti-piece:nth-child(13) {
+  left: 91%;
+  -webkit-transform: rotate(-72deg);
+  -webkit-animation: makeItRain 1000ms infinite ease-out;
+  -webkit-animation-delay: 429ms;
+  -webkit-animation-duration: 818ms;
+}
+.confetti-piece:nth-child(odd) {
+  background: #7431e8;
+}
+.confetti-piece:nth-child(even) {
+  z-index: 1;
+}
+.confetti-piece:nth-child(4n) {
+  width: 5px;
+  height: 12px;
+  -webkit-animation-duration: 2000ms;
+}
+.confetti-piece:nth-child(3n) {
+  width: 3px;
+  height: 10px;
+  -webkit-animation-duration: 2500ms;
+  -webkit-animation-delay: 1000ms;
+}
+.confetti-piece:nth-child(4n-7) {
+  background: red;
+}
+@-webkit-keyframes makeItRain {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: translateY(350px);
+  }
+}
